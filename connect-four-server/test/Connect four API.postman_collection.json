@@ -1,0 +1,673 @@
+{
+	"info": {
+		"_postman_id": "63ddfb5d-9304-44b6-a473-9331cf1eb053",
+		"name": "Connect four API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "game",
+			"item": [
+				{
+					"name": "move",
+					"item": [
+						{
+							"name": "/game/move First player",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "userId",
+										"value": "{{player1Id}}"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/game/move",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"game",
+										"move"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "userId",
+												"value": "<string>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/game/move",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"game",
+												"move"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=utf-8"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Invalid `userId`",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "userId",
+												"value": "<string>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/game/move",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"game",
+												"move"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "/game/move Second player",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "userId",
+										"value": "{{player2Id}}"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/game/move",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"game",
+										"move"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "userId",
+												"value": "<string>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/game/move",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"game",
+												"move"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=utf-8"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Invalid `userId`",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "userId",
+												"value": "<string>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/game/move",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"game",
+												"move"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "/game/move/:m First player",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "userId",
+										"value": "{{player1Id}}"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/game/move/:m",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"game",
+										"move",
+										":m"
+									],
+									"variable": [
+										{
+											"key": "m",
+											"value": "1",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "userId",
+												"value": "<string>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/game/move/:m",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"game",
+												"move",
+												":m"
+											],
+											"variable": [
+												{
+													"key": "m"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=utf-8"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Invalid `userId`",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "userId",
+												"value": "<string>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/game/move/:m",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"game",
+												"move",
+												":m"
+											],
+											"variable": [
+												{
+													"key": "m"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "`m` not found",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "userId",
+												"value": "<string>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/game/move/:m",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"game",
+												"move",
+												":m"
+											],
+											"variable": [
+												{
+													"key": "m"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "/game/move/:m First player Copy",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "userId",
+										"value": "{{player2Id}}"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/game/move/:m",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"game",
+										"move",
+										":m"
+									],
+									"variable": [
+										{
+											"key": "m",
+											"value": "2",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "userId",
+												"value": "<string>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/game/move/:m",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"game",
+												"move",
+												":m"
+											],
+											"variable": [
+												{
+													"key": "m"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=utf-8"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "`m` not found",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "userId",
+												"value": "<string>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/game/move/:m",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"game",
+												"move",
+												":m"
+											],
+											"variable": [
+												{
+													"key": "m"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Invalid `userId`",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "userId",
+												"value": "<string>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/game/move/:m",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"game",
+												"move",
+												":m"
+											],
+											"variable": [
+												{
+													"key": "m"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "/game/register First player",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "5f4b2f47-11c1-461b-92d2-55c65a7a7d3a",
+								"exec": [
+									"var gid = pm.response.json().gamerId",
+									"",
+									"pm.environment.set(\"player1Id\", gid);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/game/register",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"game",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Untitled Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/game/register",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"game",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "/game/register Second player",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "af98c163-dfee-4f03-af11-bd6863957dbc",
+								"exec": [
+									"var gid = pm.response.json().gamerId",
+									"",
+									"pm.environment.set(\"player2Id\", gid);",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/game/register",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"game",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Untitled Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/game/register",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"game",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "a4cd5615-5035-4ae7-b50f-728bd5300d53",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "b34536bc-95bf-45af-840d-3f061d1c79fc",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "046a2909-ac25-42e1-b3d3-f162437a9ab3",
+			"key": "baseUrl",
+			"value": "/"
+		}
+	],
+	"protocolProfileBehavior": {}
+}

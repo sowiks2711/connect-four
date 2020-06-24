@@ -1,0 +1,132 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: b7d23c84a5169790b9b5780e3ae69a31c3ccf9793f63a1c30a1006fe2fcca4df
+
+name:           connect-four-client
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/connect-four-client#readme>
+homepage:       https://github.com/githubuser/connect-four-client#readme
+bug-reports:    https://github.com/githubuser/connect-four-client/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2020 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/connect-four-client
+
+library
+  exposed-modules:
+      Client
+      GameSearch
+      GameSearch.ConnectFour
+      GameSearch.Core
+      Messages
+  other-modules:
+      Paths_connect_four_client
+  hs-source-dirs:
+      src
+  build-depends:
+      aeson
+    , array
+    , base >=4.7 && <5
+    , connect-four-common
+    , containers
+    , http-client
+    , http-types
+    , mtl
+    , random
+    , random-fu
+    , servant
+    , servant-client
+    , text
+    , transformers
+  default-language: Haskell2010
+
+executable connect-four-cli-client-exe
+  main-is: InteractiveClient.hs
+  other-modules:
+      ArtificialClient
+      Paths_connect_four_client
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -main-is InteractiveClient
+  build-depends:
+      aeson
+    , array
+    , base >=4.7 && <5
+    , connect-four-client
+    , connect-four-common
+    , containers
+    , http-client
+    , http-types
+    , mtl
+    , random
+    , random-fu
+    , servant
+    , servant-client
+    , text
+    , transformers
+  default-language: Haskell2010
+
+executable connect-four-mcts-exe
+  main-is: ArtificialClient.hs
+  other-modules:
+      InteractiveClient
+      Paths_connect_four_client
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -main-is ArtificialClient
+  build-depends:
+      aeson
+    , array
+    , base >=4.7 && <5
+    , connect-four-client
+    , connect-four-common
+    , containers
+    , http-client
+    , http-types
+    , mtl
+    , random
+    , random-fu
+    , servant
+    , servant-client
+    , text
+    , transformers
+  default-language: Haskell2010
+
+test-suite connect-four-client-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_connect_four_client
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      aeson
+    , array
+    , base >=4.7 && <5
+    , connect-four-client
+    , connect-four-common
+    , containers
+    , http-client
+    , http-types
+    , mtl
+    , random
+    , random-fu
+    , servant
+    , servant-client
+    , text
+    , transformers
+  default-language: Haskell2010

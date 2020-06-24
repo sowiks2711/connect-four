@@ -1,0 +1,83 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 6021cab456016754a0c180bc6de73a05825de0aea2972a3f4414404e55cd283c
+
+name:           connect-four-common
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/connect-four-server#readme>
+homepage:       https://github.com/githubuser/connect-four-server#readme
+bug-reports:    https://github.com/githubuser/connect-four-server/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2020 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/connect-four-server
+
+library
+  exposed-modules:
+      GameBoard
+  other-modules:
+      Paths_connect_four_common
+  hs-source-dirs:
+      src
+  build-depends:
+      HUnit
+    , QuickCheck
+    , array
+    , base >=4.7 && <5
+    , mtl
+    , test-framework
+    , test-framework-hunit
+    , test-framework-quickcheck2
+  default-language: Haskell2010
+
+executable connect-four-common-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_connect_four_common
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      HUnit
+    , QuickCheck
+    , array
+    , base >=4.7 && <5
+    , connect-four-common
+    , mtl
+    , test-framework
+    , test-framework-hunit
+    , test-framework-quickcheck2
+  default-language: Haskell2010
+
+test-suite connect-four-common-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_connect_four_common
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      HUnit
+    , QuickCheck
+    , array
+    , base >=4.7 && <5
+    , connect-four-common
+    , mtl
+    , test-framework
+    , test-framework-hunit
+    , test-framework-quickcheck2
+  default-language: Haskell2010

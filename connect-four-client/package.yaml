@@ -1,0 +1,72 @@
+name:                connect-four-client
+version:             0.1.0.0
+github:              "githubuser/connect-four-client"
+license:             BSD3
+author:              "Author name here"
+maintainer:          "example@example.com"
+copyright:           "2020 Author name here"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/githubuser/connect-four-client#readme>
+
+dependencies:
+- array
+- random-fu
+- random
+- mtl
+- http-types
+- transformers
+- connect-four-common
+- servant-client
+- servant
+- http-client
+- aeson
+- text
+- containers
+- base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+
+executables:
+  connect-four-cli-client-exe:
+    main:                InteractiveClient.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    - -main-is InteractiveClient
+    dependencies:
+    - connect-four-client
+  connect-four-mcts-exe:
+    main:               ArtificialClient.hs
+    source-dirs:        app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    - -main-is ArtificialClient
+    dependencies:
+    - connect-four-client
+
+tests:
+  connect-four-client-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - connect-four-client

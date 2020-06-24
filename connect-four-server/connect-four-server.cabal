@@ -1,0 +1,118 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: d722c4e2858eb5f4f5e82c4ce0e10a62debd330a9cfdfec74cd62f47bbf429a6
+
+name:           connect-four-server
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/connect-four-server#readme>
+homepage:       https://github.com/githubuser/connect-four-server#readme
+bug-reports:    https://github.com/githubuser/connect-four-server/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2020 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/connect-four-server
+
+library
+  exposed-modules:
+      DataContract
+      Handlers
+      Server
+  other-modules:
+      Paths_connect_four_server
+  hs-source-dirs:
+      src
+  build-depends:
+      aeson
+    , aeson-pretty
+    , base >=4.7 && <5
+    , base-compat
+    , bytestring
+    , connect-four-common
+    , lens
+    , random
+    , servant
+    , servant-server
+    , servant-swagger
+    , stm
+    , string-conversions
+    , swagger2
+    , text
+    , transformers
+    , uuid
+    , wai
+    , warp
+  default-language: Haskell2010
+
+executable connect-four-server-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_connect_four_server
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      aeson
+    , aeson-pretty
+    , base >=4.7 && <5
+    , base-compat
+    , bytestring
+    , connect-four-common
+    , connect-four-server
+    , lens
+    , random
+    , servant
+    , servant-server
+    , servant-swagger
+    , stm
+    , string-conversions
+    , swagger2
+    , text
+    , transformers
+    , uuid
+    , wai
+    , warp
+  default-language: Haskell2010
+
+test-suite connect-four-server-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_connect_four_server
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      aeson
+    , aeson-pretty
+    , base >=4.7 && <5
+    , base-compat
+    , bytestring
+    , connect-four-common
+    , connect-four-server
+    , lens
+    , random
+    , servant
+    , servant-server
+    , servant-swagger
+    , stm
+    , string-conversions
+    , swagger2
+    , text
+    , transformers
+    , uuid
+    , wai
+    , warp
+  default-language: Haskell2010

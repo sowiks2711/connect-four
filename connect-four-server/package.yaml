@@ -1,0 +1,53 @@
+library:
+  source-dirs: src
+tests:
+  connect-four-server-test:
+    source-dirs: test
+    main: Spec.hs
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - connect-four-server
+copyright: 2020 Author name here
+maintainer: example@example.com
+dependencies:
+- random
+- uuid
+- text
+- aeson-pretty
+- lens
+- transformers
+- aeson
+- stm
+- warp
+- servant
+- wai
+- string-conversions
+- bytestring
+- base-compat
+- servant-server
+- servant-swagger
+- swagger2
+- base >= 4.7 && < 5
+- connect-four-common
+name: connect-four-server
+version: 0.1.0.0
+extra-source-files:
+- README.md
+- ChangeLog.md
+author: Author name here
+github: githubuser/connect-four-server
+license: BSD3
+executables:
+  connect-four-server-exe:
+    source-dirs: app
+    main: Main.hs
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - connect-four-server
+description: Please see the README on GitHub at <https://github.com/githubuser/connect-four-server#readme>
